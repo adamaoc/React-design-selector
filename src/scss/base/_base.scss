@@ -1,0 +1,90 @@
+/* ==================================
+   ========= Define Variables =======
+   ================================== */
+
+$primary-color: #557278; // green
+$secondary-color: #7F342C; // red
+
+$font-color: #333;
+$header-font-color: #50585D;
+
+$base-font: 'Droid Serif', serif;
+
+$header-font: 'Open Sans', sans-serif;
+
+$xs: 20rem;
+$sm: 40rem;
+$md: 60rem;
+$lg: 80rem;
+
+$grid-padding: 1em;
+
+// Import base functions (compass)
+@import "functions";
+
+@import "grid";
+
+/* ==================================
+   ====== Setup Base & Helpers ======
+   ================================== */
+
+*{
+	margin: 0;
+	padding: 0;
+    -moz-box-sizing:    border-box; 
+    -webkit-box-sizing: border-box;  
+    box-sizing:        border-box;  
+}
+
+html {
+    height: 100%;
+    max-height: 100%;
+    font-size: 16px;
+}
+
+body {
+	font-size: 1em;
+	line-height: 1.6;
+	color: #3A4145;
+    font-family: $base-font;
+    height: 100%;
+    max-height: 100%;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* ==================================
+   ====== Setup Base Typography =====
+   ================================== */
+@import "typography";

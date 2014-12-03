@@ -21,9 +21,10 @@ gulp.task('copy-html', function() {
 });
 
 gulp.task('sass', function () {
-    gulp.src('src/scss/*.scss')
+    gulp.src('src/scss/**/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('dist/css'));
+        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('dist-html/css'));
 });
 
 gulp.task('html', ['copy-html']);

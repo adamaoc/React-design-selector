@@ -1,0 +1,141 @@
+@mixin bp($point) {
+  @if $point == xs {
+    @media (min-width: $xs) { @content; }
+  }
+  @else if $point == sm {
+    @media (min-width: $sm) { @content; }
+  }
+  @else if $point == md {
+    @media (min-width: $md)  { @content; }
+  }
+  @else if $point == lg {
+    @media (min-width: $lg)  { @content; }
+  }
+}
+
+$pad: $grid-padding;
+
+// Centered container element
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding: $pad;
+  max-width: $lg;
+  @include clearfix();
+}
+.row {
+  @include clearfix();
+}
+
+[class*='col-'] {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding: $pad / 2;
+}
+
+.col-xs-1 {
+  width: 12.5%;
+}
+.col-xs-2 {
+  width: 25%;
+}
+.col-xs-3 {
+  width: 37.5%;
+}
+.col-xs-4 {
+  width: 50%;
+}
+.col-xs-5 {
+  width: 62.5%;
+}
+.col-xs-6 {
+  width: 75%;
+}
+.col-xs-7 {
+  width: 87.5%;
+}
+.col-xs-8 {
+  width: 100%;
+}
+
+@include bp(sm) {
+  .col-sm-1 {
+    width: 12.5%;
+  }
+  .col-sm-2 {
+    width: 25%;
+  }
+  .col-sm-3 {
+    width: 37.5%;
+  }
+  .col-sm-4 {
+    width: 50%;
+  }
+  .col-sm-5 {
+    width: 62.5%;
+  }
+  .col-sm-6 {
+    width: 75%;
+  }
+  .col-sm-7 {
+    width: 87.5%;
+  }
+  .col-sm-8 {
+    width: 100%;
+  }
+}
+
+@include bp(md) {
+  .col-md-1 {
+    width: 12.5%;
+  }
+  .col-md-2 {
+    width: 25%;
+  }
+  .col-md-3 {
+    width: 37.5%;
+  }
+  .col-md-4 {
+    width: 50%;
+  }
+  .col-md-5 {
+    width: 62.5%;
+  }
+  .col-md-6 {
+    width: 75%;
+  }
+  .col-md-7 {
+    width: 87.5%;
+  }
+  .col-md-8 {
+    width: 100%;
+  }
+}
+
+@include bp(lg) {
+  .col-lg-1 {
+    width: 12.5%;
+  }
+  .col-lg-2 {
+    width: 25%;
+  }
+  .col-lg-3 {
+    width: 37.5%;
+  }
+  .col-lg-4 {
+    width: 50%;
+  }
+  .col-lg-5 {
+    width: 62.5%;
+  }
+  .col-lg-6 {
+    width: 75%;
+  }
+  .col-lg-7 {
+    width: 87.5%;
+  }
+  .col-lg-8 {
+    width: 100%;
+  }
+}

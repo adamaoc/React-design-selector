@@ -1,13 +1,24 @@
 /** @jsx React.DOM */
 var React = require('react');
-var AppActions = require('../actions/app-actions.js');
+var Manufacturer = require('./manufacturer/app-manufacturer.js');
+var Router = require('react-router-component');
+var Template = require('./app-template.js');
+
+var Locations = Router.Locations;
+var Location = Router.Location;
+
+
 var APP =
   React.createClass({
-    handleClick:function(){
-      AppActions.addPlayer('this is the item');
-    },
     render:function(){
-      return <h1 onClick={this.handleClick}>MY FLUX APP</h1>
+      return (
+        <Template>
+          <Locations>
+            <Location path="/" handler={Manufacturer} />
+          </Locations>
+        </Template>
+
+        )
     }
   });
 module.exports = APP;
