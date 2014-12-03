@@ -15,11 +15,18 @@ gulp.task('copy', function() {
       .pipe(gulp.dest('dist'));
 });
 
+gulp.task('copy-html', function() {
+    gulp.src('html/index.html')
+      .pipe(gulp.dest('dist-html'));
+});
+
 gulp.task('sass', function () {
     gulp.src('src/scss/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('dist/css'));
 });
+
+gulp.task('html', ['copy-html']);
 
 gulp.task('default',['browserify', 'copy', 'sass']);
 
