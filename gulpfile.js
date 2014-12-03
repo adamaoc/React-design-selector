@@ -28,7 +28,7 @@ gulp.task('sass', function () {
 
 gulp.task('html', ['copy-html']);
 
-gulp.task('default',['browserify', 'copy', 'sass']);
+gulp.task('default',['browserify', 'copy', 'sass', 'html']);
 
 gulp.task('watch', function() {
     gulp.watch('src/**/*.*', ['default']);
