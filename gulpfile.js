@@ -31,5 +31,5 @@ gulp.task('html', ['copy-html']);
 gulp.task('default',['browserify', 'copy', 'sass', 'html']);
 
 gulp.task('watch', function() {
-    gulp.watch('src/**/*.*', ['default']);
+    gulp.watch(['src/**/*.*', 'html/**/*.*'], ['default']);
 });
