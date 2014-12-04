@@ -2,16 +2,15 @@
 var React = require('react');
 Link = require('react-router-component').Link;
 
-var Manufacturer =
+var Layout =
   React.createClass({
     render:function(){
         return (
           <div>
-            <h2>Choose Manufacturer</h2>
-            <Link href={'/design'}>Design</Link>
+            <h2>Choose a Layout</h2>
+            <Link href={'/palette'}>Back to Palette</Link>
           </div>
-
         )
     }
-});
-module.exports = Manufacturer;
+  });
+module.exports = Layout;
