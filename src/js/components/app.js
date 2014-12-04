@@ -17,7 +17,7 @@ var APP =
       return (
         <Template>
           <Locations>
-            <Location path="/" handler={Manufacturer} />
+            <Location path="/" handler={Design} />
             <Location path="/design" handler={Design} />
             <Location path="/palette" handler={Palette} />
             <Location path="/layout" handler={Layout} />

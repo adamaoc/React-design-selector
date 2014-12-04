@@ -39,8 +39,36 @@ var _fordSkinCatalog = [{
             'primaryColor': '#333'
         }
     ]
+  },
+  {
+    'DesignName': 'FordPremier',
+    'DisplayName':'Ford Premier',
+    'Layouts': ['Default', 'B', 'C', 'D'],
+    'Palettes': [
+        {
+            'paletteName': 'EsapeBlueDark',
+            'displayName': 'Escape Blue Dark',
+            'primaryColor': '#333'
+        },
+        {
+            'paletteName': 'EsapeBlueLight',
+            'displayName': 'Escape Blue Light',
+            'primaryColor': '#333'
+        }
+    ]
   }];
 
 
 
 // var _cartItems = [];
+
+var AppStore = merge(EventEmitter.prototype, {
+    emitChange:function() {
+        this.emit(CHANGE_EVENT)
+    },
+
+    getDesigns:function() {
+        return _fordSkinCatalog
+    }
+})
+module.exports = AppStore;
