@@ -7,7 +7,7 @@ var CatDesign =
     render:function(){
       return (
           <div className="design-time">
-            {this.props.design}
+            {this.props.design.DisplayName}
           </div>
 
         )
