@@ -9,6 +9,10 @@ Link = require('react-router-component').Link;
 function getDesigns() {
   return{designs: AppStore.getDesigns()}
 }
+function selectedDesign() {
+  // console.log(AppStore.getSelectedDesign());
+  return{selectedDesign: AppStore.getSelectedDesign()}
+}
 var Design =
   React.createClass({
     mixins: [new StoreWatchMixin(getDesigns)],
@@ -17,10 +21,10 @@ var Design =
         return <CatDesign design={design} />
       })
         return (
-          <div>
+          <div className="container">
             <h2>Choose a Design</h2>
             {designs}
-            <ChosenDesign>Ford Unity</ChosenDesign>
+            <ChosenDesign>{selectedDesign()}</ChosenDesign>
             <Link href={'/'}>Back to Manufacturer</Link> | 
             <Link href={'/palette'}>Choose your color</Link>
           </div>
