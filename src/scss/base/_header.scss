@@ -1,0 +1,28 @@
+body {
+	background-color: #E7E7E7;
+}
+
+.header-wrapper {
+  width: 100%;
+  background-color: #000;
+  border-bottom: 5px solid #868686;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+
+  & .container {
+  	padding: 0 1em 1em 1em;
+  }
+ }
+
+ .title-wrapper {
+ 	margin-top: 1em;
+ }
+
+ .logo-wrapper {
+ 	padding: 0 1em 1em 1em;
+
+ 	& img {
+ 		float: right;
+ 	}
+ }

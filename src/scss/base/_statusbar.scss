@@ -1,0 +1,56 @@
+.step-title-wrapper {
+	text-align: center;
+	margin-top: 75px;
+	padding: 20px;
+	font-size: 1.5em;
+	border-radius: $border-radius;
+	background: #e7e7e7;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e7e7e7', endColorstr='#ffffff');
+	background: -webkit-linear-gradient(#e7e7e7, #ffffff);
+	background: -moz-linear-gradient(#e7e7e7, #ffffff);
+	background: -o-linear-gradient(#e7e7e7, #ffffff);
+	background: linear-gradient(#e7e7e7, #ffffff);
+}
+
+.triangle {
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+
+	border-top: 20px solid #fff;
+	margin-left: 106px;
+  
+  &:before {
+    clear: both;
+  }
+}
+
+.status-bar-wrapper {
+	
+}
+
+.selected-wrapper {
+	background: #6a6a6a;
+	padding: .5em;
+	border-radius: $border-radius;
+	
+}
+
+.selected-holder-wrapper {
+	display: block;
+
+	& span {
+		float: left;
+	}
+}
+
+.selected-holder {
+	border-radius: 3px;
+	padding: .1em;
+	background: #ccc;
+	display: block;
+	float: right;
+	width: 88%;
+	min-height: 28px;
+}

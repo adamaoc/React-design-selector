@@ -8,7 +8,7 @@ $secondary-color: #7F342C; // red
 $font-color: #333;
 $header-font-color: #50585D;
 
-$base-font: 'Droid Serif', serif;
+$base-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 
 $header-font: 'Open Sans', sans-serif;
 
@@ -18,6 +18,8 @@ $md: 60rem;
 $lg: 80rem;
 
 $grid-padding: 1em;
+
+$border-radius: 8px;
 
 // Import base functions (compass)
 @import "functions";
