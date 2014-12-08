@@ -19,7 +19,8 @@ $pad: $grid-padding;
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding: $pad;
+  // Took padding off, was messing with other containers.
+  // padding: $pad;
   max-width: $lg;
   @include clearfix();
 }
