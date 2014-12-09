@@ -60,10 +60,14 @@ var _fordSkinCatalog = [{
 
 
 
-var _designSelected = "Ford Unity";
+var _designSelectedDisplayName = "Ford Unity";
+var _designSelectedDesignName = "FordUnity"
 
-function _updateDesign(design){
-    _designSelected = design;
+function _updateDesign(names){
+    var designName = names[0];
+    var displayName = names[1];
+    _designSelectedDisplayName = displayName;
+    _designSelectedDesignName = designName;
 }
 
 var AppStore = merge(EventEmitter.prototype, {
@@ -83,8 +87,12 @@ var AppStore = merge(EventEmitter.prototype, {
         return _fordSkinCatalog
     },
 
-    getSelectedDesign:function() {
-        return _designSelected;
+    getSelectedDesignDisplayName:function() {
+        return _designSelectedDisplayName;
+    },
+
+    getSelectedDesignDesignName:function() {
+        return _designSelectedDesignName;
     },
 
     dispatcherIndex:AppDispatcher.register(function(payload){

@@ -4,14 +4,16 @@ var AppStore = require('../../stores/app-store.js');
 var CatDesign = require('./app-catdesign.js');
 var ChosenDesign = require('./app-chosendesign.js');
 var StoreWatchMixin = require('../../mixins/StoreWatchMixin.js');
-Link = require('react-router-component').Link;
+
 
 function getDesigns() {
   return{designs: AppStore.getDesigns()}
 }
-function selectedDesign() {
-  // console.log(AppStore.getSelectedDesign());
-  return{selectedDesign: AppStore.getSelectedDesign()}
+function selectedDesignDesignName() {
+  return{selectedDesignDesignName: AppStore.getSelectedDesignDesignName()}
+}
+function selectedDesingDisplayName() {
+  return{selectedDesignDisplayName: AppStore.getSelectedDesignDisplayName()}
 }
 var Design =
   React.createClass({
@@ -21,12 +23,15 @@ var Design =
         return <CatDesign design={design} />
       })
         return (
-          <div className="container">
-            <h2>Choose a Design</h2>
-            {designs}
-            <ChosenDesign>{selectedDesign()}</ChosenDesign>
-            <Link href={'/'}>Back to Manufacturer</Link> | 
-            <Link href={'/palette'}>Choose your color</Link>
+          <div className="row container design-selection-wrapper">
+            <div className="col-xs-8">
+              <div className="row">
+                <ul className="design-selector-list">
+                  {designs}    
+                </ul>
+              </div>
+            </div>
+            <ChosenDesign displayName={selectedDesingDisplayName()} designName={selectedDesignDesignName()}></ChosenDesign>
           </div>
         )
     }

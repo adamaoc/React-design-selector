@@ -5,14 +5,17 @@ var ChosenDesign =
   React.createClass({
 
     render:function(){
+      var designName = this.props.designName.selectedDesignDesignName;
+      var imgpath = "/img/Responsive-"+designName+".png";
       return (
-          <div className="design-time">
-          	<h3>Chosen Design</h3>
-          	<div className="design-wrap">
-            	{this.props.children}
+        <div className="row container">
+          <div className="col-xs-8">
+            <div className="large-image-wrapper">
+              <div className="large-image-wrapper-title">Viewing: {this.props.displayName.selectedDesignDisplayName}</div>
+              <img src={imgpath} />
             </div>
           </div>
-
+        </div>
         )
     }
   });

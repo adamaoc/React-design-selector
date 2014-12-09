@@ -103,17 +103,16 @@ $breadcrumb-primary-color: $primary-color;
 	padding-left: 20px;
 }
 
-.breadcrumb li:last-child a {
+.breadcrumb li.active a {
 	background: $dt-success;
 	color: white;	
 }
 
-.breadcrumb li:last-child a:after {
+.breadcrumb li.active a:after {
 	border-left: 30px solid $dt-success;
 	border-top: 50px solid transparent;
 	border-bottom: 50px solid transparent;
 }
-
 .breadcrumb li a:hover { 
 	background: $dt-blue-hover;
 

@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-// var browserify = require('gulp-browserify');
+var browserify = require('gulp-browserify');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 
@@ -16,6 +16,11 @@ gulp.task('copy', function() {
       .pipe(gulp.dest('dist'));
 });
 
+gulp.task('copy', function() {
+  gulp.src('src/img/**/*.*')
+  .pipe(gulp.dest('dist/img'));
+});
+
 gulp.task('copy-html', function() {
     gulp.src('html/index.html')
       .pipe(gulp.dest('dist-html'));
@@ -30,8 +35,8 @@ gulp.task('sass', function () {
 
 gulp.task('html', ['copy-html']);
 
-// gulp.task('default',['browserify', 'copy', 'sass', 'html']);
-gulp.task('default',['copy', 'sass', 'html']);
+gulp.task('default',['browserify', 'copy', 'sass', 'html']);
+//gulp.task('default',['copy', 'sass', 'html']);
 
 gulp.task('watch', function() {
 

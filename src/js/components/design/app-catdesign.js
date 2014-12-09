@@ -4,17 +4,20 @@ var AppActions = require('../../actions/app-actions.js');
 
 var CatDesign =
   React.createClass({
-    
     handleClick:function(){
-      // console.log(this.props.design.DisplayName);
-      AppActions.updateDesign(this.props.design.DisplayName);
+      DesignName = this.props.design.DesignName;
+      DisplayName = this.props.design.DisplayName;
+      var names = [DesignName, DisplayName];
+      AppActions.updateDesign(names);
     },
     render:function(){
+      var imgpath = "/img/Responsive-"+this.props.design.DesignName+".png";
+      
       return (
-          <button className="design-time" onClick={this.handleClick}>
-            {this.props.design.DisplayName}
-          </button>
-
+          <li className="col-xs-3-true" onClick={this.handleClick}>
+            <div className="selector-title">{this.props.design.DisplayName}</div>
+            <img src={imgpath} />
+          </li>
         )
     }
   });

@@ -5,10 +5,12 @@ var Header =
   React.createClass({
     render:function(){
       return (
-        <div className="header">
-          <div className="container row">
-            <span className="col-sm-6">Responsive Design Selector</span>
-            <div className="logo col-sm-2">DT LOGO HERE</div>
+        <div className="row header-wrapper">
+          <div className="container">
+            <div className="col-xs-3 logo-wrapper">
+              <img src="https://www.dealertrack.com/public/images/NewLogo.png" />
+            </div>
+            
           </div>
         </div>
         )
