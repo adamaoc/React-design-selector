@@ -1,5 +1,6 @@
 /** @jsx React.DOM */
 var React = require('react');
+Link = require('react-router-component').Link;
 
 var Footer =
   React.createClass({
@@ -8,10 +9,10 @@ var Footer =
         <div className="row footer">
           <div className="container">
             <div className="col-xs-4">
-              <button>« Back</button>
+              <Link href={'/design'}>« Back</Link>
             </div>
             <div className="col-xs-4">
-              <button className="next-button">Next »</button>
+              <Link className="next-button" href={'/palette'}>Next »</Link>
             </div>
           </div>
         </div>

@@ -11,13 +11,17 @@
 	bottom:0px;
 	width:100%;
 
-   & button {
+   & a {
    	padding: .8em 3em;
    	border: none;
    	background: $primary-color;
    	cursor: pointer;
    	border-radius: $border-radius - 4;
    	transition: $transition;
+      color: #333;
+      font-size: .8em;
+      font-weight: bold;
+      text-decoration: none;
    }
 
    & .next-button {
@@ -25,7 +29,7 @@
    	background: $dt-success;
    }
 
-   & button:hover {
+   & a:hover {
    	background: #ccc;
    }
 }

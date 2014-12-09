@@ -20,6 +20,15 @@ $breadcrumb-primary-color: $primary-color;
 	background: linear-gradient($primary-color, #ffffff);
 }
 
+.status-bar-wrapper {
+	.title-wrapper {
+		min-width: 37em;
+	}
+	.breadcrumb-wrapper {
+		min-width: 35em;
+	}
+}
+
 .selected-wrapper {
 	background: $selected-wrapper;
 	padding: .5em 0;	
