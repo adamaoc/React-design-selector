@@ -41,6 +41,9 @@ $pad: $grid-padding;
 .col-xs-2 {
   width: 25%;
 }
+.col-xs-3-true {
+  width: 31%;
+}
 .col-xs-3 {
   width: 37.5%;
 }
@@ -70,6 +73,9 @@ $pad: $grid-padding;
   .col-sm-3 {
     width: 37.5%;
   }
+  .col-sm-3-true {
+    width: 32.2%;
+  }
   .col-sm-4 {
     width: 50%;
   }
@@ -97,6 +103,9 @@ $pad: $grid-padding;
   .col-md-3 {
     width: 37.5%;
   }
+  .col-md-3-true {
+    width: 32.6%;
+  }
   .col-md-4 {
     width: 50%;
   }
@@ -123,6 +132,9 @@ $pad: $grid-padding;
   }
   .col-lg-3 {
     width: 37.5%;
+  }
+  .col-lg-3-true {
+    width: 32.7%;
   }
   .col-lg-4 {
     width: 50%;

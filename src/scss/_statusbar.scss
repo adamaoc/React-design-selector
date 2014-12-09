@@ -1,9 +1,10 @@
 
-$arrow-box-size: 25px;
 
 $step-counter-color: #CCCCCC;
 
-$selected-wrapper: #868686;
+$selected-wrapper: $dt-blue;
+
+$breadcrumb-primary-color: $primary-color;
 
 .step-title-wrapper {
 	text-align: center;
@@ -11,24 +12,17 @@ $selected-wrapper: #868686;
 	padding: 20px;
 	font-size: 1.5em;
 	border-radius: $border-radius;
-	background: #e7e7e7;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e7e7e7', endColorstr='#ffffff');
-	background: -webkit-linear-gradient(#e7e7e7, #ffffff);
-	background: -moz-linear-gradient(#e7e7e7, #ffffff);
-	background: -o-linear-gradient(#e7e7e7, #ffffff);
-	background: linear-gradient(#e7e7e7, #ffffff);
-}
-
-
-.status-bar-wrapper {
-	margin: 2em 0;
+	background: $primary-color;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$primary-color', endColorstr='#ffffff');
+	background: -webkit-linear-gradient($primary-color, #ffffff);
+	background: -moz-linear-gradient($primary-color, #ffffff);
+	background: -o-linear-gradient($primary-color, #ffffff);
+	background: linear-gradient($primary-color, #ffffff);
 }
 
 .selected-wrapper {
 	background: $selected-wrapper;
-	padding: .5em;
-	border-radius: $border-radius;
-	
+	padding: .5em 0;	
 }
 
 .selected-holder-wrapper {
@@ -42,14 +36,12 @@ $selected-wrapper: #868686;
 .selected-holder {
 	border-radius: 3px;
 	padding: .1em;
-	background: #ccc;
+	background: $breadcrumb-primary-color;
 	display: block;
 	float: right;
 	width: 88%;
 	min-height: 28px;
 }
-
-$breadcrumb-main-color: #e7e7e7;
 
 .breadcrumb { 
 	list-style: none; 
@@ -60,14 +52,14 @@ $breadcrumb-main-color: #e7e7e7;
 		float: left;
 
 		& a {
-			color: #666;
+			color: black;
 			text-decoration: none; 
-			padding: 5px 0 5px 55px;               /* fallback color */
-			background: $breadcrumb-main-color; 
+			padding: 13px 0 13px 55px;               /* fallback color */
+			background: $breadcrumb-primary-color; 
 			position: relative; 
 			display: block;
 			float: left;
-			font-size: .7em;
+			font-size: .8em;
 		}
 
 		& a:hover {
@@ -81,7 +73,7 @@ $breadcrumb-main-color: #e7e7e7;
 			height: 0;
 			border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
 			border-bottom: 50px solid transparent;
-			border-left: 30px solid $breadcrumb-main-color;
+			border-left: 30px solid $breadcrumb-primary-color;
 			position: absolute;
 			top: 50%;
 			margin-top: -50px; 
@@ -100,7 +92,7 @@ $breadcrumb-main-color: #e7e7e7;
 			position: absolute;
 			top: 50%;
 			margin-top: -50px; 
-			margin-left: 1px;
+			margin-left: 3px;
 			left: 100%;
 			z-index: 1;
 		}
@@ -108,30 +100,24 @@ $breadcrumb-main-color: #e7e7e7;
 }
 
 .breadcrumb li:first-child a {
-	padding-left: 10px;
+	padding-left: 20px;
 }
-// .breadcrumb li:nth-child(2) a       { background:        hsla(34,85%,45%,1); }
-// .breadcrumb li:nth-child(2) a:after { border-left-color: hsla(34,85%,45%,1); }
-// .breadcrumb li:nth-child(3) a       { background:        hsla(34,85%,55%,1); }
-// .breadcrumb li:nth-child(3) a:after { border-left-color: hsla(34,85%,55%,1); }
-// .breadcrumb li:nth-child(4) a       { background:        hsla(34,85%,65%,1); }
-// .breadcrumb li:nth-child(4) a:after { border-left-color: hsla(34,85%,65%,1); }
-// .breadcrumb li:nth-child(5) a       { background:        hsla(34,85%,75%,1); }
-// .breadcrumb li:nth-child(5) a:after { border-left-color: hsla(34,85%,75%,1); }
-// .breadcrumb li:last-child a {
-// 	background: white !important;
-// 	color: black;
-// 	pointer-events: none;
-// 		cursor: default;
-// }
-// .breadcrumb li:last-child a:after { border: 0; }
-.breadcrumb li a:hover { background: $dt-blue; }
-.breadcrumb li a:hover:after { border-left-color: $dt-blue !important; }
 
+.breadcrumb li:last-child a {
+	background: $dt-success;
+	color: white;	
+}
 
+.breadcrumb li:last-child a:after {
+	border-left: 30px solid $dt-success;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+}
 
+.breadcrumb li a:hover { 
+	background: $dt-blue-hover;
 
-
-
-
-
+	&:after {
+		border-left-color: $dt-blue-hover !important; 
+	} 
+}

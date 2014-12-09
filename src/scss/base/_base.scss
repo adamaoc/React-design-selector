@@ -2,7 +2,7 @@
    ========= Define Variables =======
    ================================== */
 
-$primary-color: #557278; // green
+$primary-color: #E7E7E7;
 $secondary-color: #7F342C; // red
 
 $font-color: #333;
@@ -22,6 +22,10 @@ $grid-padding: 1em;
 $border-radius: 8px;
 
 $dt-blue: #00549f;
+$dt-blue-hover: #02466F;
+$dt-success: #46af46;
+
+$transition: all .3s ease-out;
 
 // Import base functions (compass)
 @import "functions";

@@ -1,0 +1,31 @@
+#main {
+	padding-bottom: 8rem;
+}
+
+.footer {
+	background: black;
+	padding: 1em;
+	border-bottom: 6px solid #868686;
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	width:100%;
+
+   & button {
+   	padding: .8em 3em;
+   	border: none;
+   	background: $primary-color;
+   	cursor: pointer;
+   	border-radius: $border-radius - 4;
+   	transition: $transition;
+   }
+
+   & .next-button {
+   	float: right;
+   	background: $dt-success;
+   }
+
+   & button:hover {
+   	background: #ccc;
+   }
+}
