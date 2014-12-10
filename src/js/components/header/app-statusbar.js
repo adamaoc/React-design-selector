@@ -1,5 +1,6 @@
 /** @jsx React.DOM */
 var React = require('react');
+Link = require('react-router-component').Link;
 
 var Statusbar =
   React.createClass({
@@ -10,12 +11,12 @@ var Statusbar =
             <div className="col-xs-4 title-wrapper">
               <h2>Responsive Design Selector</h2>
             </div>
-            <div className="col-xs-4">
+            <div className="col-xs-4 breadcrumb-wrapper">
               <ul className="breadcrumb">
-                <li><a href="#">1. OEM</a></li>
-                <li className="active"><a href="#">2. Select Design</a></li>
-                <li><a href="#">3. Select Color &amp; Layout</a></li>
-                <li><a href="#">4. Finalize</a></li>
+                <li className="active"><Link href={'/'}>1. Select Design</Link></li>
+                <li><Link href={'/palette'}>2. Select Color</Link></li>
+                <li><Link href={'/layout'}>3. Select Layout</Link></li>
+                <li><Link href={'/final'}>4. Finalize</Link></li>
               </ul>
             </div>
           </div>

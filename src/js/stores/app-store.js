@@ -58,16 +58,21 @@ var _fordSkinCatalog = [{
     ]
   }];
 
-
+var _pageState = "palette";
 
 var _designSelectedDisplayName = "Ford Unity";
-var _designSelectedDesignName = "FordUnity"
+var _designSelectedDesignName = "FordUnity";
 
 function _updateDesign(names){
     var designName = names[0];
     var displayName = names[1];
     _designSelectedDisplayName = displayName;
     _designSelectedDesignName = designName;
+}
+
+function _updatePageState(page) {
+    console.log(page);
+    // _pageState = page;
 }
 
 var AppStore = merge(EventEmitter.prototype, {
@@ -93,6 +98,9 @@ var AppStore = merge(EventEmitter.prototype, {
 
     getSelectedDesignDesignName:function() {
         return _designSelectedDesignName;
+    },
+    getCurrentPage:function() {
+        return _updatePageState;
     },
 
     dispatcherIndex:AppDispatcher.register(function(payload){

@@ -9,6 +9,7 @@ var Template = require('./app-template.js');
 
 var Locations = Router.Locations;
 var Location = Router.Location;
+var NotFound = Router.NotFound;
 
 
 var APP =
@@ -21,6 +22,7 @@ var APP =
             <Location path="/design" handler={Design} />
             <Location path="/palette" handler={Palette} />
             <Location path="/layout" handler={Layout} />
+            <NotFound handler={Design} />
           </Locations>
         </Template>
 
