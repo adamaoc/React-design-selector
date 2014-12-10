@@ -113,6 +113,18 @@ $breadcrumb-primary-color: $primary-color;
 	border-top: 50px solid transparent;
 	border-bottom: 50px solid transparent;
 }
+
+.breadcrumb li.completed a {
+	background: $dt-blue-hover;	
+	color: white;
+}
+
+.breadcrumb li.completed a:after {
+	border-left: 30px solid $dt-blue-hover;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+}
+
 .breadcrumb li a:hover { 
 	background: $dt-blue-hover;
 
