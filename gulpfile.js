@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var browserify = require('gulp-browserify');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
+var fileinclude = require('gulp-file-include')
 
 gulp.task('browserify', function() {
     gulp.src('src/js/main.js')
@@ -33,9 +34,18 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('dist-html/css'));
 });
 
+gulp.task('fileinclude', function() {
+  gulp.src(['html/*.html'])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: 'html/partials/'
+    }))
+    .pipe(gulp.dest('dist-html'));
+});
+
 gulp.task('html', ['copy-html']);
 
-gulp.task('default',['browserify', 'copy', 'sass', 'html']);
+gulp.task('default',['browserify', 'copy', 'sass', 'fileinclude']);
 //gulp.task('default',['copy', 'sass', 'html']);
 
 gulp.task('watch', function() {
