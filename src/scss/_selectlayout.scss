@@ -28,6 +28,10 @@
   cursor: pointer;
   margin-bottom: 2em;
 
+  & li img {
+    width: 100%;
+  }
+
   & li span {
     font-size: 10em;
     line-height: 1;
