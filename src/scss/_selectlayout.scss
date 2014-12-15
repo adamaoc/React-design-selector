@@ -1,0 +1,125 @@
+.selected {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+
+  & .selector-title {
+    background: $dt-blue;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: 50%;
+    margin: 1em auto;
+    color: white;
+    padding: .2em 0;
+    transition: all .3s ease-out;
+  }
+
+  & span {
+    opacity: 1 !important;
+    color: $dt-blue;
+  }
+}
+
+.layout-selector-list {
+  list-style: none;
+  margin-left: 0;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 2em;
+
+  & li span {
+    font-size: 10em;
+    line-height: 1;
+    opacity: .5;
+  }
+
+  & li:hover span {
+    opacity: 1;
+    color: $dt-blue;
+  }
+  
+  & .selector-title {
+    margin:1em auto .5em;
+  }
+  
+  & li {
+    // -webkit-box-shadow: none;
+    // -moz-box-shadow: none;
+    // box-shadow: none;
+    transition: all .3s ease-out;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    // border: 3px solid #E7E7E7;
+    margin: 0;
+  }
+
+  // & li:nth-child(2) {
+  //   margin-left: 2em;
+  // }
+
+  & li:last-child {
+    float: right;
+  }
+  
+  & li:hover {
+    transition: all .3s ease-out;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75) inset;
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75) inset;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75) inset;
+    
+    // border: 6px solid #868686;
+    // margin: -3px;
+  }
+
+  & li .selector-title {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: 50%;
+    margin: 1em auto;
+    padding: .2em 0;
+    transition: all .3s ease-out;
+  }
+  
+  & li:hover .selector-title {
+    background: $dt-blue;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: 50%;
+    margin: 1em auto;
+    color: white;
+    padding: .2em 0;
+    transition: all .3s ease-out;
+  }
+}
+
+
+.large-image-wrapper-title {
+  background: $dt-blue;
+  color: white;
+  padding: .5em;
+  text-align: center;
+  width: 50%;
+  margin: -1.9em auto 50px;
+  font-size: 1.4em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.large-image-wrapper {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 1em;
+  margin-top: 25px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  & img {
+    width: 100%;
+  }
+}
