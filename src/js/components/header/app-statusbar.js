@@ -14,8 +14,8 @@ var Statusbar =
             <div className="col-xs-4 breadcrumb-wrapper">
               <ul className="breadcrumb">
                 <li className="active"><Link href={'/'}>1. Select Design</Link></li>
-                <li><Link href={'/palette'}>2. Select Color</Link></li>
                 <li><Link href={'/layout'}>3. Select Layout</Link></li>
+                <li><Link href={'/palette'}>2. Select Color</Link></li>
                 <li><Link href={'/final'}>4. Finalize</Link></li>
               </ul>
             </div>
