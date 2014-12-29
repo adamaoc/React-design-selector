@@ -2,7 +2,7 @@
 var AppData = [{
     'DesignName': 'FordUnity',
     'DisplayName':'Ford Unity',
-    'Layouts': ['Default', 'B', 'C', 'D'],
+    'Layouts': ['A', 'B', 'C', 'D'],
     'Palettes': [
         {
             'paletteName': 'EsapeBlueDark',
@@ -19,7 +19,7 @@ var AppData = [{
   {
     'DesignName': 'FordMagnetic',
     'DisplayName':'Ford Magnetic',
-    'Layouts': ['Default', 'B', 'C', 'D'],
+    'Layouts': ['A', 'B', 'C', 'D'],
     'Palettes': [
         {
             'paletteName': 'EsapeBlueDark',
@@ -36,7 +36,7 @@ var AppData = [{
   {
     'DesignName': 'FordPremier',
     'DisplayName':'Ford Premier',
-    'Layouts': ['Default', 'B', 'C', 'D'],
+    'Layouts': ['A', 'B', 'C', 'D'],
     'Palettes': [
         {
             'paletteName': 'EsapeBlueDark',

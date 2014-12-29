@@ -1,31 +1,34 @@
 /** @jsx React.DOM */
 var React = require('react');
+var AppStore = require('../../stores/app-store.js');
+var StoreWatchMixin = require('../../mixins/StoreWatchMixin.js');
+var layoutItems = require('../layout/app-layoutitems.js');
+
+
+function getDesigns() {
+  return{designs: AppStore.getDesigns()}
+}
+function selectedDesignDesignName() {
+  return{ selectedDesignDesignName: AppStore.getSelectedDesignDesignName()}
+}
+function selectedDesignLayout() {
+  return{ selectedLayout: AppStore.getSelectedLayout()}
+}
+function getLayouts() {
+  var layouts = AppStore.getLayouts();
+  return layouts
+}
 
 var Layout =
   React.createClass({
+    mixins: [new StoreWatchMixin(getDesigns)],
     render:function(){
         return (
           <div className="row container select-layout-options-wrapper">
+          <h3>{selectedDesignDesignName()} - Layout {selectedDesignLayout()}</h3>
             <div className="col-xs-8">
               <div className="row">
-                <ul className="layout-selector-list">
-                  <li className="col-xs-8 col-md-2 selected">
-                    <div className="selector-title">Layout A</div>
-                    <img src="https://s3.amazonaws.com/uploads.hipchat.com/20402/404850/ViB6LcIGUOcZkwi/Layout_A_Default.jpg" />
-                  </li>
-                  <li className="col-xs-8 col-md-2">
-                    <div className="selector-title">Layout B</div>
-                    <img src="https://s3.amazonaws.com/uploads.hipchat.com/20402/404850/r3xksS2moFRT06g/Layout_B.jpg" />
-                  </li>
-                  <li className="col-xs-8 col-md-2">
-                    <div className="selector-title">Layout C</div>
-                    <img src="https://s3.amazonaws.com/uploads.hipchat.com/20402/404850/QOnMMM724NsrdnT/Layout_C.jpg" />
-                  </li>
-                  <li className="col-xs-8 col-md-2">
-                    <div className="selector-title">Layout D</div>
-                    <img src="https://s3.amazonaws.com/uploads.hipchat.com/20402/404850/WDvSlqY1lZMcRMI/Layout_D.jpg" />
-                  </li>
-                </ul>
+                <layoutItems layout={getLayouts()} />
               </div>
             </div>
           </div>

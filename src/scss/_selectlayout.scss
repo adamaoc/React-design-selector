@@ -15,10 +15,10 @@
     transition: all .3s ease-out;
   }
 
-  & span {
-    opacity: 1 !important;
-    color: $dt-blue;
-  }
+  // & span {
+  //   opacity: 1 !important;
+  //   color: $dt-blue;
+  // }
 }
 
 .layout-selector-list {
@@ -32,16 +32,16 @@
     width: 100%;
   }
 
-  & li span {
-    font-size: 10em;
-    line-height: 1;
-    opacity: .5;
-  }
+  // & li span {
+  //   font-size: 10em;
+  //   line-height: 1;
+  //   opacity: .5;
+  // }
 
-  & li:hover span {
-    opacity: 1;
-    color: $dt-blue;
-  }
+  // & li:hover span {
+  //   opacity: 1;
+  //   color: $dt-blue;
+  // }
   
   & .selector-title {
     margin:1em auto .5em;

@@ -7,6 +7,12 @@ var AppActions = {
       actionType: AppConstants.UPDATE_DESIGN,
       design: design
     })
+  },
+  updateLayout:function(layout){
+  	AppDispatcher.handleViewAction({
+  		actionType: AppConstants.UPDATE_LAYOUT,
+  		layout: layout
+  	})
   }
 }
 
