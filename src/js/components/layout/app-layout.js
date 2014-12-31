@@ -23,12 +23,13 @@ var Layout =
   React.createClass({
     mixins: [new StoreWatchMixin(getDesigns)],
     render:function(){
+        var selectedDesign = selectedDesignDesignName();
         return (
           <div className="row container select-layout-options-wrapper">
-          <h3>{selectedDesignDesignName()} - Layout {selectedDesignLayout()}</h3>
+          <h3>{selectedDesign} - Layout {selectedDesignLayout()}</h3>
             <div className="col-xs-8">
               <div className="row">
-                <layoutItems layout={getLayouts()} />
+                <layoutItems layout={getLayouts()} design={selectedDesign} />
               </div>
             </div>
           </div>

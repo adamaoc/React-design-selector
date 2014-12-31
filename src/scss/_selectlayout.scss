@@ -31,7 +31,10 @@
   & li img {
     width: 100%;
   }
-
+  .active {
+    display: block;
+    background: $dt-success;
+  }
   // & li span {
   //   font-size: 10em;
   //   line-height: 1;

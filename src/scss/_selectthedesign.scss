@@ -1,8 +1,9 @@
 .design-selector-list {
   list-style: none;
-  margin-left: 0;
   text-align: center;
-  cursor: pointer;
+  overflow: hidden;
+  max-width: 50em;
+  margin: 0 auto;
   
   & li img {
     padding: 1em;
@@ -23,6 +24,7 @@
     border-radius: 5px;
     // border: 3px solid #E7E7E7;
     margin: 0;
+    cursor: pointer;
   }
 
   // & li:nth-child(2) {

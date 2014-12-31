@@ -4,16 +4,11 @@ var layoutItem = require('../layout/app-layoutitem.js');
 
 var layoutItems =
 	React.createClass({
-		handleClick:function(){
-			var SelectedLayout = this.props.layoutName;
-			console.log(SelectedLayout);
-
-		},
 		render:function(){
 			var items = this.props.layout.map(function(name){
 				return (
-					<li className="col-xs-8 col-md-2 selected">
-						<layoutItem layoutName={name} />
+					<li className="col-xs-8 col-md-2">
+						<layoutItem layoutName={name} designName={this.props.design} />
 					</li>
 				)
 			}, this)
