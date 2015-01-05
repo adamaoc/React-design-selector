@@ -4,8 +4,8 @@ var AppStore = require('../../stores/app-store.js');
 var StoreWatchMixin = require('../../mixins/StoreWatchMixin.js');
 
 
-function selectedDesignDesignName() {
-  return{ selectedDesignDesignName: AppStore.getSelectedDesignDesignName()}
+function getSelectedDesignDisplayName() {
+  return{ selectedDesignDesignName: AppStore.getSelectedDesignDisplayName()}
 }
 function selectedDesignLayout() {
   return{ selectedLayout: AppStore.getSelectedLayout()}
@@ -13,13 +13,13 @@ function selectedDesignLayout() {
 
 var CurrentSelection =
   React.createClass({
-    mixins: [new StoreWatchMixin(selectedDesignDesignName)],
+    mixins: [new StoreWatchMixin(getSelectedDesignDisplayName)],
     render:function(){
-      var selectedDesign = selectedDesignDesignName();
+      var selectedDesign = getSelectedDesignDisplayName();
       var selectedLayout = selectedDesignLayout();
       return (
         <div className="current-selection">
-          {selectedDesign} | Layout {selectedLayout} | Color
+          {selectedDesign} Layout {selectedLayout} Color
         </div>
         )
     }

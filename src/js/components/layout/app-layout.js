@@ -26,7 +26,6 @@ var Layout =
         var selectedDesign = selectedDesignDesignName();
         return (
           <div className="row container select-layout-options-wrapper">
-          <h3>{selectedDesign} - Layout {selectedDesignLayout()}</h3>
             <div className="col-xs-8">
               <div className="row">
                 <layoutItems layout={getLayouts()} design={selectedDesign} />
