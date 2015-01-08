@@ -1,13 +1,18 @@
 /** @jsx React.DOM */
 var React = require('react');
 var layoutItem = require('../layout/app-layoutitem.js');
+var AppStore = require('../../stores/app-store.js');
 
 var layoutItems =
 	React.createClass({
 		render:function(){
 			var items = this.props.layout.map(function(name){
+				var style = '';
+				if(name == AppStore.getSelectedLayout()) {
+					style = 'focused';
+				}
 				return (
-					<li className="col-xs-8 col-md-2">
+					<li className={style + ' col-xs-8 col-md-2'}>
 						<layoutItem layoutName={name} designName={this.props.design} />
 					</li>
 				)
