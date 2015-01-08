@@ -11,7 +11,7 @@ var Header =
             <div className="col-xs-3 logo-wrapper">
               <img src="https://www.dealertrack.com/public/images/NewLogo.png" />
             </div>
-            <div className="col-xs-9 currselect-wrapper">
+            <div className="col-xs-5 currselect-wrapper">
               <CurrentSelection />
             </div>
           </div>

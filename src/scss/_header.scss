@@ -7,7 +7,7 @@ body {
   background-color: #000;
   border-bottom: 5px solid #868686;
   color: white;
-  
+
 
   & .container {
   	padding: 0 1em;
@@ -23,8 +23,11 @@ body {
 
  .logo-wrapper {
  	padding: 0 1em .3em;
-
- 	// & img {
- 	// 	float: right;
- 	// }
  }
+
+.current-selection {
+	padding-top: 2.5em;
+	float: right;
+	color: $header-font-color;
+	font-weight: bold;
+}
