@@ -11,19 +11,17 @@ var Locations = Router.Locations;
 var Location = Router.Location;
 var NotFound = Router.NotFound;
 
-
 var APP =
   React.createClass({
     render:function(){
       return (
         <Template>
           <Locations>
-            <Location path="/design" handler={Design} />
-            <Location path="/" handler={Layout} />
+            <Location path="/" handler={Design} />
+            <Location path="/layout" handler={Layout} />
             <Location path="/palette" handler={Palette} />
           </Locations>
         </Template>
-
         )
     }
   });
