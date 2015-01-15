@@ -18,12 +18,11 @@ var APP =
       return (
         <Template>
           <Locations>
-            <Location path="/design" handler={Design} />
-            <Location path="/" handler={Layout} />
+            <Location path="/" handler={Design} />
+            <Location path="/layout" handler={Layout} />
             <Location path="/palette" handler={Palette} />
           </Locations>
         </Template>
-
         )
     }
   });
