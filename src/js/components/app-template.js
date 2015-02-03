@@ -4,7 +4,6 @@ var Header = require('./header/app-header.js');
 var Statusbar = require('./header/app-statusbar.js');
 var Footer = require('./header/app-footer.js');
 
-
 var Template =
   React.createClass({
     render:function(){

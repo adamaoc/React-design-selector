@@ -11,7 +11,6 @@ var Locations = Router.Locations;
 var Location = Router.Location;
 var NotFound = Router.NotFound;
 
-
 var APP =
   React.createClass({
     render:function(){
@@ -23,7 +22,6 @@ var APP =
             <Location path="/palette" handler={Palette} />
           </Locations>
         </Template>
-
         )
     }
   });
